@@ -15,6 +15,15 @@ class CreateTransaksisTable extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_cust'); 
+            $table->string("email") ;
+            $table->string("tanggal_penyewaan");
+            $table->string("harga_sewa");
+            $table->string("berapa_lama_sewa" );
+            $table->string("deposit" );
+            $table->string("jumlah" );
+            $table->string("metode_pembayaraan" );
+            $table->string("kode_booking");
             $table->timestamps();
         });
     }

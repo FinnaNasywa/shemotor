@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KendaraanController;
 use App\Http\Controllers\FormulirController;
+use App\Http\Controllers\TransaksiController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -72,6 +74,12 @@ Route::post('/formulir', [FormulirController::class, 'store']);
 Route::get('/formulir/{id}', [FormulirController::class, 'show']);
 Route::put('/formulir/{id}', [FormulirController::class, 'update']);
 Route::delete('formulir/{id}', [FormulirController::class, 'destroy']);
+
+Route::get('/transaksi', [TransaksiController::class, 'index']);
+Route::post('/transaksi', [TransaksiController::class, 'store']);
+Route::get('/transaksi/{id}', [TransaksiController::class, 'show']);
+Route::put('/transaksi/{id}', [TransaksiController::class, 'update']);
+Route::delete('transaksi/{id}', [TransaksiController::class, 'destroy']);
 Route::post('/logout', [AuthController::class, 'logout']);
     // Route::resource('authors', AuthorController::class)->except(
     // ['create', 'edit', 'index', 'show']
